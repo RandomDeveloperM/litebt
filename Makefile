@@ -35,5 +35,5 @@ build_linux:
 	@GOOS=linux GOARCH=amd64 \
 		go build -ldflags "-w -s" -o $(downloader_out_file_linux) $(downloader_in_file)
 clean:
-	@rm -rf $(spider_out_file_linux) $(searcher_out_file_linux)
-	@rm -rf $(spider_out_file_win) $(searcher_out_file_win)
+	@rm -rf $(spider_out_file_linux) $(searcher_out_file_linux) $(downloader_out_file_linux)
+	@rm -rf $(spider_out_file_win) $(searcher_out_file_win) $(downloader_out_file_win)
