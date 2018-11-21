@@ -13,6 +13,10 @@ help:
 	@echo '------------------------'
 	@cat Makefile |grep '^\w.*:$$'
 
+go_get:
+	@go get github.com\gin-gonic\gin
+	@go get github.com\go-ego\riot
+
 build_win:
 	@go build -ldflags "-w -s" -o $(spider_out_file_win) $(spider_in_file)
 	@go build -ldflags "-w -s" -o $(search_out_file_win) $(search_in_file)
