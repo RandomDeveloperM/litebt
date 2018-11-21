@@ -12,9 +12,11 @@ import (
 var Db *gorm.DB
 
 func init() {
-	dbUri := fmt.Sprintf("%s:%s@/%s?charset=utf8&parseTime=True&loc=Local",
+	dbUri := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local",
 		lib.Cfg.Db.Username,
 		lib.Cfg.Db.Password,
+		lib.Cfg.Db.Host,
+		lib.Cfg.Db.Port,
 		lib.Cfg.Db.DbName)
 
 	var err error

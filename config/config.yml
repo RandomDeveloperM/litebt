@@ -5,6 +5,8 @@ downloader:
   port: 8882
 
 db:
+  host: "localhost"
+  port: 3306
   dbname: "litebt"
-  username: "litebt"
-  password: "litebt@fuckyou"
+  username: ""
+  password: ""
