@@ -1,11 +1,11 @@
 spider_in_file=spider/main.go
-search_in_file=search/main.go
+search_in_file=searcher/main.go
 
 spider_out_file_linux=cmd/spider
 search_out_file_linux=cmd/search
 
-spider_out_file_win=$(out_file_spider).exe
-search_out_file_win=$(out_file_search).exe
+spider_out_file_win=$(spider_out_file_linux).exe
+search_out_file_win=$(search_out_file_linux).exe
 
 
 help:
@@ -20,3 +20,7 @@ build_win:
 build_linux:
 	@go build -ldflags "-w -s" -o $(spider_out_file_linux) $(spider_in_file)
 	@go build -ldflags "-w -s" -o $(search_out_file_linux) $(search_in_file)
+
+clean:
+	@rm -rf $(spider_out_file_linux) $(search_out_file_linux)
+	@rm -rf $(spider_out_file_win) $(search_out_file_win)
