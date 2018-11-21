@@ -22,13 +22,11 @@ build_win:
 	@go build -ldflags "-w -s" -o $(search_out_file_win) $(search_in_file)
 
 cross_build_linux:
-	@export GOOS=linux
-	@export GOARCH=amd64
 	@make build_linux
 
 build_linux:
-	@go build -ldflags "-w -s" -o $(spider_out_file_linux) $(spider_in_file)
-	@go build -ldflags "-w -s" -o $(search_out_file_linux) $(search_in_file)
+	@GOOS=linux GOARCH=amd64 go build -ldflags "-w -s" -o $(spider_out_file_linux) $(spider_in_file)
+	@GOOS=linux GOARCH=amd64 go build -ldflags "-w -s" -o $(search_out_file_linux) $(search_in_file)
 
 clean:
 	@rm -rf $(spider_out_file_linux) $(search_out_file_linux)
