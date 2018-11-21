@@ -8,5 +8,5 @@ db:
   host: "localhost"
   port: 3306
   dbname: "litebt"
-  username: ""
-  password: ""
+  username: "dbuser"
+  password: "dbuser_pass"
