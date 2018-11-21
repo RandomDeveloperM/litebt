@@ -7,4 +7,4 @@
     make
     make build_win
     make cross_build_win
-
+    make build_linux
