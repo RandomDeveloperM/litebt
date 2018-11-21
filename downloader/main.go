@@ -1,4 +1,4 @@
-package downloader
+package main
 
 import (
 	"github.com/molisoft/litebt/downloader/service"
